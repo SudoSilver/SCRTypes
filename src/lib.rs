@@ -13,3 +13,5 @@ pub use crate::boolean_expansion::boolean_extension::BoolExpansion;
 pub use crate::hashmap_expansion::hashmap_extension::HashMapExpansion;
 pub use crate::hashmap_expansion::hashmap_simplify::SimpleHashMap;
 pub use crate::file_expansion::smart_files::read_lines;
+
+pub use crate::vector_expansion::matrix::chunk_matrix::ChunkMatrix;
