@@ -3,6 +3,7 @@ pub enum ParseErrors {
     NotAValidInt,
     NotAValidFloat,
     NotAValidBool,
+    NotAValidUInt,
 }
 
 #[derive(Debug, PartialEq)]
