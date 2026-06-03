@@ -9,7 +9,7 @@ pub trait ExtendedStrings {
     fn to_int(&self) -> Result<i64, ParseErrors>;
     fn to_float(&self) -> Result<f64, ParseErrors>;
     fn to_bool(&self) -> Result<bool, ParseErrors>;
-    fn to_uint(&self) -> Result<usize, ParseErrors>;
+    fn to_uint(&self) -> Result<u64, ParseErrors>;
 }
 
 // === Traits Implemented Here === //
@@ -55,7 +55,7 @@ impl ExtendedStrings for str {
         }
     }
 
-    fn to_uint(&self) -> Result<usize, ParseErrors> {
+    fn to_uint(&self) -> Result<u64, ParseErrors> {
         match self.parse::<u64>() {
             Ok(uint) => return Ok(uint),
             Err(_) => return Err(ParseErrors::NotAValidUInt),
