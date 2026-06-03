@@ -5,9 +5,11 @@ pub trait ExtendedStrings {
     fn is_int(&self) -> bool;
     fn is_float(&self) -> bool;
     fn is_bool(&self) -> bool;
+    fn is_uint(&self) -> bool;
     fn to_int(&self) -> Result<i64, ParseErrors>;
     fn to_float(&self) -> Result<f64, ParseErrors>;
     fn to_bool(&self) -> Result<bool, ParseErrors>;
+    fn to_uint(&self) -> Result<usize, ParseErrors>;
 }
 
 // === Traits Implemented Here === //
@@ -25,6 +27,10 @@ impl ExtendedStrings for str {
             return true;
         }
         return false;
+    }
+
+    fn is_uint(&self) -> bool {
+        return self.parse::<u64>().is_ok();
     }
 
     fn to_int(&self) -> Result<i64, ParseErrors> {
@@ -46,6 +52,13 @@ impl ExtendedStrings for str {
             "true" => return Ok(true),
             "false" => return Ok(false),
             _ => return Err(ParseErrors::NotAValidBool),
+        }
+    }
+
+    fn to_uint(&self) -> Result<usize, ParseErrors> {
+        match self.parse::<u64>() {
+            Ok(uint) => return Ok(uint),
+            Err(_) => return Err(ParseErrors::NotAValidUInt),
         }
     }
 }

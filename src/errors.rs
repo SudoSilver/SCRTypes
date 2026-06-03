@@ -10,3 +10,9 @@ pub enum FileErrors {
     FileNotExists,
     UnableToReadFromFile,
 }
+
+#[derive(Debug, PartialEq)]
+pub enum MathErrors {
+    NotAValidMatrix,
+    NotAValidMatrixRow,
+}

@@ -4,6 +4,7 @@ pub mod vector_expansion;
 pub mod boolean_expansion;
 pub mod hashmap_expansion;
 pub mod file_expansion;
+pub mod traits;
 
 pub use crate::errors::{ ParseErrors, FileErrors };
 pub use crate::string_expansion::string_extension::ExtendedStrings;
