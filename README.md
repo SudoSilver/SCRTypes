@@ -85,6 +85,6 @@ These I believe are the only errors the crate can have.
 
 ---
 ## Note
-The crate was developed by me with tests written by Claude I encourage adding abstractions for things you consider bothersome, improving existing abstractions or writing the tests as they are currently not the best. Criticism is welcome as long as it is respectful and technical. A lot of corners were cut for the sake of convenience some will be fixed later.
+The crate was developed by me with tests written by Claude I encourage adding abstractions for things you consider bothersome, improving existing abstractions or writing the tests as they are currently not the best. Criticism is welcome as long as it is respectful and technical. A lot of corners were cut for the sake of convenience some will be fixed later. This project has now been moved to testing it is not production grade software DO NOT USE IN PRODUCTION.
 
 - [SudoSilver](https://github.com/SudoSilver) 
